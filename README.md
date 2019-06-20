@@ -9,6 +9,8 @@ Click on anywhere on the progress bar to automatically scroll the page.
 
 ```npm
 yarn add react-styled-clickable-progress-bar
+```
+```npm
 npm install react-styled-clickable-progress-bar
 ```
 
