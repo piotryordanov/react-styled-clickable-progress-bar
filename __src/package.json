@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "next",
-    "build": "next build && next export && mv out/* ../"
+    "build": "next build && next export && mv out/* ../ %% git push"
   },
   "dependencies": {
     "next": "^8.1.0",
