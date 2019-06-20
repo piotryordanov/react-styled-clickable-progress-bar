@@ -48,7 +48,7 @@ const ProgressBar = props => {
 
   return (
     <>
-      <Bar width={width} {...props} />;
+      <Bar width={width} {...props} />
       <Bar
         onClick={e => onClick(e, updateWidth)}
         width={"100%"}
