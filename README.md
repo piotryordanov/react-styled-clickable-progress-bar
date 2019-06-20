@@ -7,15 +7,17 @@ Click on anywhere on the progress bar to automatically scroll the page.
 
 # Install
 
-> yarn add react-styled-clickable-progress-bar
-> npm install react-styled-clickable-progress-bar
+```npm
+yarn add react-styled-clickable-progress-bar
+npm install react-styled-clickable-progress-bar
+```
 
 # Usage
 
 
 ## Default Progress Bar
 
-```
+```jsx
 import React from "react";
 import ProgressBar from "react-styled-clickable-progress-bar";
 
@@ -26,7 +28,7 @@ export default Index;
 
 ## Customize with styled-components
 
-```
+```jsx
 import React from "react";
 import styled from 'styled-components'
 import ProgressBar from "react-styled-clickable-progress-bar";
@@ -42,7 +44,7 @@ export default Index;
 
 ## Custom Settings
 
-```
+```jsx
 import React from "react";
 import ProgressBar from "react-styled-clickable-progress-bar";
 
@@ -54,7 +56,7 @@ export default Index;
 
 ## Configuration
 
-```
+```jsx
 <ProgressBar
   top="0px"
   left="0px"
