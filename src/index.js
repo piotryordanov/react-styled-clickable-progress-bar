@@ -48,7 +48,7 @@ const ProgressBar = props => {
 	}, [])
 
 	return typeof window === 'object' && typeof document === 'object' ? (
-		<>
+		<div>
 			<Bar width={width} {...props} />
 			<Bar
 				width="100%"
@@ -56,9 +56,9 @@ const ProgressBar = props => {
 				{...props}
 				color="transparent"
 			/>
-		</>
+		</div>
 	) : (
-		<> </>
+		<div> </div>
 	)
 }
 
