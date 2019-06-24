@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/bin/yarn add -D eslint-config-xo-reacet
+  /usr/bin/node /usr/bin/yarn add -D @babel/core @babel/cli @babel/preset-env @babel/preset-react
 
 PATH: 
   /home/alpha/.local/bin:/home/alpha/.local/npm-global/bin:/home/alpha/.config/bin/platform-tools:/home/alpha/.config/bin:/home/alpha/.npm-global/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
@@ -14,22 +14,17 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/eslint-config-xo-reacet: Not found
-      at Request.params.callback [as _callback] (/usr/lib/node_modules/yarn/lib/cli.js:66091:18)
-      at Request.self.callback (/usr/lib/node_modules/yarn/lib/cli.js:129590:22)
-      at Request.emit (events.js:193:13)
-      at Request.<anonymous> (/usr/lib/node_modules/yarn/lib/cli.js:130562:10)
-      at Request.emit (events.js:193:13)
-      at IncomingMessage.<anonymous> (/usr/lib/node_modules/yarn/lib/cli.js:130484:12)
-      at Object.onceWrapper (events.js:281:20)
-      at IncomingMessage.emit (events.js:198:15)
-      at endReadableNT (_stream_readable.js:1139:12)
-      at processTicksAndRejections (internal/process/task_queues.js:81:17)
+  SyntaxError: /home/alpha/stimming/react-styled-clickable-progress-bar/package.json: Unexpected token p in JSON at position 393
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:304:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:315:13
 
 npm manifest: 
   {
     "name": "react-styled-clickable-progress-bar",
-    "version": "1.0.5",
+    "version": "1.0.8",
     "description": "A clickable progress bar, using styled-components",
     "main": "build/index.js",
     "peerDependencies": {
@@ -40,7 +35,7 @@ npm manifest:
     "scripts": {
       "dev": "webpack-dev-server --mode development --open",
       "test": "xo --fix",
-      "build": "webpack"
+      "build": ""prepublishOnly": "babel ./src --out-dir ./dist -s inline"
     },
     "repository": {
       "type": "git",
@@ -62,23 +57,16 @@ npm manifest:
       "email": "versari@pm.me"
     },
     "devDependencies": {
-      "babel-core": "^6.21.0",
-      "babel-loader": "^7.1.4",
-      "babel-preset-env": "^1.6.1",
-      "babel-preset-react": "^6.16.0",
-      "babel-preset-stage-0": "^6.24.1",
+      "eslint-config-xo-react": "^0.19.0",
       "path": "^0.12.7",
       "prop-types": "^15.6.0",
       "react": "^16.0.0",
-      "react-dom": "^16.0.0",
-      "webpack": "^4.5.0",
-      "webpack-cli": "^3.2.1"
+      "react-dom": "^16.0.0"
     },
     "babel": {
       "presets": [
-        "react",
-        "env",
-        "stage-0"
+        "@babel/preset-env",
+        "@babel/preset-react"
       ],
       "plugins": [
         [
@@ -1966,6 +1954,11 @@ Lockfile:
     version "1.0.5"
     resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
     integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+  
+  eslint-config-xo-react@^0.19.0:
+    version "0.19.0"
+    resolved "https://registry.yarnpkg.com/eslint-config-xo-react/-/eslint-config-xo-react-0.19.0.tgz#26c452c4729750935fb6b65923e222c4fd42b214"
+    integrity sha512-0PizlypxrXj92rW+u39sQndo2/7B7PL3wBpZs6+wXHx4+RiBO/V2yB/rUXdwS7DGpoKPtQzTdmQquPW5+vbbZw==
   
   eslint-scope@^4.0.0:
     version "4.0.3"
