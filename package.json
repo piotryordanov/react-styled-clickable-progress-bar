@@ -1,6 +1,6 @@
 {
   "name": "react-styled-clickable-progress-bar",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A clickable progress bar, using styled-components",
   "peerDependencies": {
     "prop-types": "^15.6.0",
