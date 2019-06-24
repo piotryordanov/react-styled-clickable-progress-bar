@@ -63,9 +63,9 @@ const ProgressBar = props => {
 }
 
 ProgressBar.propTypes = {
-	top: PropTypes.number,
-	left: PropTypes.number,
-	height: PropTypes.number,
+	top: PropTypes.string,
+	left: PropTypes.string,
+	height: PropTypes.string,
 	color: PropTypes.string
 }
 ProgressBar.defaultProps = {
