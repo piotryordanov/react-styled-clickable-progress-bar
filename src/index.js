@@ -1,12 +1,10 @@
 import React from 'react'
 
-const ProgressBar = props => {
-  return <div> Hello world </div>
+const ProgressBar = () => {
+	return <div> Hello world </div>
 }
 
-ProgressBar.propTypes = {
-}
-ProgressBar.defaultProps = {
-}
+ProgressBar.propTypes = {}
+ProgressBar.defaultProps = {}
 
 export default ProgressBar
