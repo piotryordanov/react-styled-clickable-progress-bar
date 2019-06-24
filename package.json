@@ -83,10 +83,5 @@
       "react/jsx-tag-spacing": 0,
       "react/react-in-jsx-scope": 2
     }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test"
-    }
   }
 }

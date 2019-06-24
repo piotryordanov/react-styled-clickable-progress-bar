@@ -27,42 +27,54 @@ const onClick = e => {
 }
 
 const ProgressBar = props => {
-	const [width, updateWidth] = useState(null)
+	// Const [width, updateWidth] = useState(null)
 	console.log('here')
+	try {
+		console.log(document)
+	} catch {
+		console.log('document aint defined')
+	}
+
+	try {
+		console.log(window)
+	} catch {
+		console.log('window aint defined')
+	}
+
 	console.log(window)
-	console.log(document)
-	useEffect(() => {
-		const Scrolling = () => {
-			const winScroll =
-				document.body.scrollTop || document.documentElement.scrollTop
-			const height =
-				document.documentElement.scrollHeight -
-				document.documentElement.clientHeight
-			const scrolled = (winScroll / height) * 100
-			if (height > 0) {
-				updateWidth(`${scrolled}%`)
-			} else {
-				updateWidth(null)
-			}
-		}
-
-		window.addEventListener('scroll', Scrolling)
-		return () => window.removeEventListener('scroll', Scrolling)
-	}, [])
-
-	return typeof window === 'object' && typeof document === 'object' ? (
-		<>
-			<Bar width={width} {...props} />
-			<Bar
-				width="100%"
-				onClick={e => onClick(e, updateWidth)}
-				{...props}
-				color="transparent"
-			/>
-		</>
-	) : (
-		<> </>
-	)
+	return <div>Hello world</div>
+	// UseEffect(() => {
+	// 	const Scrolling = () => {
+	// 		const winScroll =
+	// 			document.body.scrollTop || document.documentElement.scrollTop
+	// 		const height =
+	// 			document.documentElement.scrollHeight -
+	// 			document.documentElement.clientHeight
+	// 		const scrolled = (winScroll / height) * 100
+	// 		if (height > 0) {
+	// 			updateWidth(`${scrolled}%`)
+	// 		} else {
+	// 			updateWidth(null)
+	// 		}
+	// 	}
+	//
+	// 	window.addEventListener('scroll', Scrolling)
+	// 	return () => window.removeEventListener('scroll', Scrolling)
+	// }, [])
+	//
+	// return typeof window === 'object' && typeof document === 'object' ? (
+	// 	<>
+	// 		<Bar width={width} {...props} />
+	// 		<Bar
+	// 			width="100%"
+	// 			onClick={e => onClick(e, updateWidth)}
+	// 			{...props}
+	// 			color="transparent"
+	// 		/>
+	// 	</>
+	// ) : (
+	// 	<> </>
+	// )
 }
 
 ProgressBar.propTypes = {
