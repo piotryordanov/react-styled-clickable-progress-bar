@@ -28,6 +28,9 @@ const onClick = e => {
 
 const ProgressBar = props => {
 	const [width, updateWidth] = useState(null)
+	console.log('here')
+	console.log(window)
+	console.log(document)
 	useEffect(() => {
 		const Scrolling = () => {
 			const winScroll =
